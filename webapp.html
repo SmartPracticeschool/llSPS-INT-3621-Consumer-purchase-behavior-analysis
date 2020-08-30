@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/Form.css') }}">
+ 
+
+
+
+ <script language="JavaScript">
+  function showInput() {
+      document.getElementById('display').innerHTML = 
+                  document.getElementById("user_input").value;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  <title>My Website</title>
+</head>
+<body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero"><h1>TEAM <span>10</span></h1></a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="services">Prediction</a></li>
+            <li><a href="#section-title" data-after="section-title">About US</a></li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>Welcome <span></span></h1>
+        <h1> TEAM 10<span></span></h1>
+        <a href="#services" type="button" class="cta">Prediction</a>
+      </div>
+     <b> <label class="cta" style="color: antiquewhite;font-size: 30px;position: relative;top:-10rem;left:34rem;"><span>OUTPUT :</span> </label></b>
+     
+           <p id='display' style="color:azure;font-size:20px;position: relative;top:5rem;left:0rem;background-color: crimson ; "><b>{{y}}</b></p>
+  
+         
+  
+          </section>
+
+
+  <section id="projects">
+    <div class="container1">
+      <form action = "/login" method = "post">
+        <div class="row">
+          <div class="col-25">
+            <label>Product_ID</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="Product_ID" placeholder="Your Product_ID .." required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="Gender">Gender</label>
+          </div>
+          <div class="col-75">
+            <select  name="Gender">
+              <option value="">-select_gender-</option>  
+              <option value="MALE" name="Gender">MALE</option>
+              <option value="FEMALE" name="Gender">FEMALE</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label>Age</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="Age" placeholder="Enter Age.." required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label>Occupation</label>
+          </div>
+          <div class="col-75">
+            <input type="text"  name="Occupation" placeholder="Enter Occupation.. " required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label>City_Category</label>
+          </div>
+          <div class="col-75">
+            <input type="text"  name="City_Category" placeholder="Enter City_Category.. " required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label>Stay_in_current_city_year</label>
+          </div>
+          <div class="col-75">
+            <input type="text"  name="Stay_in_current_city_year" placeholder="Enter Year.. " required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="Marital">Marital_Status</label>
+          </div>
+          <div class="col-75">
+            <select  name="Marital">
+              <option value="">-select Marital_Status-</option>  
+              <option value="Single" name= "Marital">Single</option>
+              <option value="Married" name= "Marital">Married</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label>Product_category1</label>
+          </div>
+          <div class="col-75">
+            <input type="text" name="Product_category1" placeholder=""  required >
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label>Product_category2</label>
+          </div>
+          <div class="col-75">
+            <input type="text"  name="Product_category2" placeholder=""  required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label>Product_category3</label>
+          </div>
+          <div class="col-75">
+            <input type="text"  name="Product_category3" placeholder=""   required>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+          <input type="submit" value="Submit" onclick="showInput();">
+          <div> <h1 id="user_input" style="color:aliceblue;font-size: 20px;background-color: black;position:relative;top:6rem;left:0rem;border:2px solid  crimson; padding:30px ;text-align:center;"><b  >{{y}}</b></h1></div>
+        </div>
+       
+    
+
+
+  </form>
+  </section>
+
+
+  
+ <section id="services">
+  <div class="services container">
+    <div class="service-top">
+      <h1 class="section-title">Consumer <span>purchase</span>  <span>behavior</span> analysis</h1>
+      <p><b>Consumer purchase behavior analysis is the study of how people make purchase decisions with regard to a product, service, or organization. Studying consumer behavior would allow you to answer several questions</b></p>
+  </div>
+    </div>
+    <section id="section-title">
+<h1 class="section-title">ABOUT <span>US</span>  </h1>
+<div class="service-bottom">
+  <div class="service-item">
+    <div class="icon"><img src="{{url_for('static', filename='images/iuk.jfif')}}"   style="border-radius: 30px;"></div>
+    
+    <h2>IMRANULLAH KHAN</h2>
+    <p>4<sup>th</sup> YEAR <br><br>Computer science Engineering</p>
+  </div>
+  <div class="service-item">
+    <div class="icon"><img src="{{url_for('static', filename='images/jyo.jpg')}}" style="border-radius: 30px;"></div>
+    <h2>JYOTHSNA MANDALA</h2>
+    <p>4<sup>th</sup> YEAR <br><br>Computer science Engineering</p>
+  </div>
+  <div class="service-item">
+    <div class="icon"><img src="{{url_for('static', filename='images/abhi.jpg')}}" style="border-radius: 30px;"></div>
+    <h2>P ABHINAND </h2>
+    <p> 4<sup>th</sup> YEAR <br><br>Computer science Engineering</p>
+  </div>
+  <div class="service-item">
+    <div class="icon"><img src="{{url_for('static', filename='images/bhavani.jpg')}}" style="border-radius: 30px;"></div>
+    <h2>P BHAVANI</h2>
+    <p>4<sup>th</sup> YEAR <br><br>Computer science Engineering</p>
+  </div>
+  </div>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand"><h1><span>Team</span>10</h1></div>
+      <h2></h2>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png"/></a>
+        </div>
+      </div>
+      <p>Copyright © 2020 Team 10. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+</html>
